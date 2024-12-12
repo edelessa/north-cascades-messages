@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import MessageList from '../MessageList/MessageList';
 
 function App () {
   useEffect( ()=>{
@@ -39,9 +40,13 @@ function App () {
       <h3>{ JSON.stringify( currentMessage ) }</h3>
       <p>{ JSON.stringify( messages ) }</p>
 
+      <MessageList messages={ messages } />
+
     </div>
   );
 
 }
 
 export default App
+
+
